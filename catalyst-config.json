@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#13bde3"/><stop offset="1" stop-color="#6d5dfc"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity=".22"/></filter></defs>
+<rect width="1400" height="800" fill="#07111f"/>
+<text x="70" y="85" fill="#33d6ff" font-family="Arial" font-size="22" font-weight="700">KAVACH 360</text>
+<text x="70" y="125" fill="#fff" font-family="Arial" font-size="34" font-weight="700">Catalyst-Powered Architecture</text>
+<g filter="url(#s)" font-family="Arial">
+<rect x="70" y="235" width="250" height="145" rx="24" fill="#0e2037" stroke="#33d6ff"/>
+<text x="195" y="295" text-anchor="middle" fill="#fff" font-size="23" font-weight="700">Authorised User</text><text x="195" y="330" text-anchor="middle" fill="#91a7c0" font-size="17">Officer / Analyst / Admin</text>
+<rect x="445" y="195" width="300" height="225" rx="24" fill="#0e2037" stroke="#33d6ff"/>
+<text x="595" y="255" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">Catalyst Web Client</text><text x="595" y="292" text-anchor="middle" fill="#91a7c0" font-size="17">Dashboard • Map • Network</text><text x="595" y="324" text-anchor="middle" fill="#91a7c0" font-size="17">Case 360 • Ask KAVACH</text><text x="595" y="366" text-anchor="middle" fill="#46e6a6" font-size="16">Production deployment</text>
+<rect x="870" y="120" width="300" height="160" rx="24" fill="#0e2037" stroke="#9f7aea"/>
+<text x="1020" y="182" text-anchor="middle" fill="#fff" font-size="23" font-weight="700">Serverless Functions</text><text x="1020" y="220" text-anchor="middle" fill="#91a7c0" font-size="17">APIs • Filtering • Risk engine</text>
+<rect x="870" y="345" width="300" height="160" rx="24" fill="#0e2037" stroke="#46e6a6"/>
+<text x="1020" y="407" text-anchor="middle" fill="#fff" font-size="23" font-weight="700">Catalyst Data Store</text><text x="1020" y="445" text-anchor="middle" fill="#91a7c0" font-size="17">Relational FIR entities</text>
+<rect x="445" y="550" width="300" height="145" rx="24" fill="#0e2037" stroke="#ffbf48"/>
+<text x="595" y="610" text-anchor="middle" fill="#fff" font-size="23" font-weight="700">Governance Layer</text><text x="595" y="648" text-anchor="middle" fill="#91a7c0" font-size="17">Human review • Audit • Privacy</text>
+<path d="M320 307H445M745 260H870M745 355H820V425H870M1020 280V345M595 420V550" fill="none" stroke="url(#g)" stroke-width="6"/>
+</g></svg>

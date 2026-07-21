@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "kavach_analytics"
+    ],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client",
+    "plugin": "basic"
+  }
+}

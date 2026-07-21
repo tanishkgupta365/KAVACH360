@@ -1,0 +1,132 @@
+# KAVACH 360
+## AI-Driven Crime Analytics & Visualization Platform
+
+KAVACH 360 is a privacy-aware operational intelligence prototype created for **KSP Datathon 2026**. It converts interconnected FIR, district, police station, accused, arrest and chargesheet records into an explainable command center.
+
+> **Data notice:** The repository contains only synthetic and anonymised prototype data generated according to the supplied FIR database design. No real citizen or operational police data is included.
+
+## Working prototype modules
+
+- Command dashboard with FIR, pendency, arrest and chargesheet KPIs
+- Explainable district risk index and anomaly alerts
+- Stylised Karnataka hotspot map with district and station drilldowns
+- FIR-to-arrest-to-chargesheet lifecycle analytics
+- Repeat-accused and co-accused relationship network
+- Case 360 timeline, legal sections and protected identity view
+- "Ask KAVACH" intent-based operational search
+- Downloadable JSON operational brief
+- Responsive UI for desktop and mobile
+
+## Ethical guardrails
+
+- No guilt inference or autonomous enforcement recommendation
+- Risk indicators use operational case patterns, not caste or religion
+- Synthetic person IDs replace real names
+- Victim identities remain protected
+- Every risk output is accompanied by contributing factors
+- Human review is required before operational action
+
+## Technology stack
+
+- HTML5, CSS3 and vanilla JavaScript
+- SVG and Canvas visualisations
+- Catalyst Web Client Hosting
+- Catalyst Serverless Advanced I/O Function (Node.js/Express)
+- Catalyst Data Store integration scaffold
+- GitHub for version control
+
+## Project structure
+
+```text
+KAVACH360/
+├── client/
+│   ├── index.html
+│   ├── styles.css
+│   ├── app.js
+│   └── client-package.json
+├── functions/
+│   └── kavach_analytics/
+│       ├── index.js
+│       ├── package.json
+│       └── catalyst-config.json
+├── data/
+│   └── datastore_schema.md
+├── docs/
+│   ├── architecture.svg
+│   └── process_flow.svg
+├── submission/
+│   └── prototype_brief.md
+├── catalyst.json
+└── README.md
+```
+
+## Run locally
+
+The client has no build step.
+
+### Option A — open directly
+Open `client/index.html` in Chrome or Edge.
+
+### Option B — local server
+From the repository root:
+
+```bash
+python -m http.server 8080 --directory client
+```
+
+Open `http://localhost:8080`.
+
+## Deploy the client to Catalyst
+
+### Console upload — fastest route
+
+1. Open your Catalyst project.
+2. Go to **Cloud Scale → Web Client Hosting**.
+3. Choose to host/upload a client.
+4. Zip the **contents of the `client` directory** or upload the client package in the format requested by the console.
+5. Ensure `index.html` and `client-package.json` are at the root of the uploaded client package.
+6. Host in Development and verify the generated URL.
+7. Deploy the tested version to Production from the Catalyst console.
+
+### CLI route
+
+```bash
+npm install -g zcatalyst-cli
+catalyst login
+catalyst init
+# Associate the folder with the existing Catalyst project.
+# Select Client and Functions when prompted.
+cd functions/kavach_analytics
+npm install
+cd ../..
+catalyst serve
+catalyst deploy
+```
+
+Production deployment is completed from the Catalyst console after the Development deployment is verified.
+
+## Data Store implementation plan
+
+Create the core Catalyst Data Store tables described in `data/datastore_schema.md`. The current client uses deterministic synthetic records for a reliable hackathon demo. The included function provides:
+
+- `GET /health`
+- `POST /risk-score`
+- `GET /district-summary` (Data Store integration scaffold)
+
+The frontend is intentionally usable before the tables are seeded. This prevents a database setup issue from blocking the demo.
+
+## Demo flow
+
+1. Show KPI dashboard and explain synthetic/anonymised data.
+2. Filter by district, category, gravity and period.
+3. Open the hotspot map and select a high-risk district.
+4. Show the explanation and recommended preventive actions.
+5. Open lifecycle analytics and delayed-case exceptions.
+6. Explore the repeat-accused network.
+7. Open a Case 360 record.
+8. Ask KAVACH: `robbery in Bengaluru`.
+9. Export the operational brief.
+
+## License and confidentiality
+
+The original supplied Police FIR database design document is not included in this public repository. This repository contains an independently created prototype and simplified schema notes only.
